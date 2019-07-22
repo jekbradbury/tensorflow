@@ -1,6 +1,6 @@
 """Repository rule to setup the external MLIR repository."""
 
-_MLIR_REV = "83ff81bfd9d382852d0302ab2a234feb2e938fc7"
+_MLIR_REV = "5879f6e6432ae0bb927a02145a84ad1d945491ec"
 _MLIR_SHA256 = "26979670616980014a823f88c1a057c28080763d9cb189fa67172a92c085d349"
 
 def _mlir_autoconf_impl(repository_ctx):
@@ -10,7 +10,6 @@ def _mlir_autoconf_impl(repository_ctx):
             "http://mirror.tensorflow.org/github.com/tensorflow/mlir/archive/{}.zip".format(_MLIR_REV),
             "https://github.com/tensorflow/mlir/archive/{}.zip".format(_MLIR_REV),
         ],
-        sha256 = _MLIR_SHA256,
         stripPrefix = "mlir-{}".format(_MLIR_REV),
     )
 
