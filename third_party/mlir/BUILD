@@ -1103,6 +1103,7 @@ cc_library(
     deps = [
         ":AffineOps",
         ":IR",
+        ":LoopOps",
         ":Pass",
         ":StandardOps",
         ":Support",
