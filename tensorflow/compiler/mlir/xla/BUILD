@@ -156,6 +156,14 @@ cc_library(
     alwayslink = 1,
 )
 
+cc_binary(
+  name = "libmlirxla.so",
+  linkshared = 1,
+  deps = [
+     ":xla",
+  ],
+)
+
 # Library with XLA dialect static initialization.
 cc_library(
     name = "xla_dialect_registration",
